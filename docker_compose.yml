@@ -7,15 +7,14 @@ services:
     networks:
       - my-net
     environment:
-      - MYSQL_ROOT_PASSWORD=P&Nwentupthehi11
+      - MYSQL_ROOT_PASSWORD=rishabh123#
       - MYSQL_DATABASE=finalproject
       - MYSQL_USER=root
-      - MYSQL_PASSWORD=rishabh123#
-    volumes:
-      - mysql_data_volume:/var/lib/mysql
+      
+    
 
     ports:
-      - "9001:3306"
+      - "3306:3306"
 
   react:
     image: rishabh123456/spe_react123
@@ -23,7 +22,7 @@ services:
     ports:
       - "3000:3000"
     networks:
-      - my-net
+      - rishabh-net
     depends_on:
       - spring
 
@@ -42,5 +41,4 @@ services:
 networks:
   rishabh-net:
 
-volumes:
-  mysql_data_volume:
+
