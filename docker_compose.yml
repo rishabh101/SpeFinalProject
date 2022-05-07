@@ -1,0 +1,46 @@
+version: "2.4"
+services:
+
+  mysql:
+    image: mysql/mysql-server
+    container_name: mysql
+    networks:
+      - my-net
+    environment:
+      - MYSQL_ROOT_PASSWORD=P&Nwentupthehi11
+      - MYSQL_DATABASE=finalproject
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=rishabh123#
+    volumes:
+      - mysql_data_volume:/var/lib/mysql
+
+    ports:
+      - "9001:3306"
+
+  react:
+    image: rishabh123456/spe_react123
+    container_name: react
+    ports:
+      - "3000:3000"
+    networks:
+      - my-net
+    depends_on:
+      - spring
+
+  spring:
+    image: rishabh123456/spe_spring
+    container_name: spring
+    ports:
+      - "8000:8000"
+    networks:
+      - rishabh-net"
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+
+networks:
+  rishabh-net:
+
+volumes:
+  mysql_data_volume:
