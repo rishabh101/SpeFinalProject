@@ -2,6 +2,6 @@
 FROM openjdk:8
 VOLUME /tmp
 EXPOSE 8000
-ADD /target/FinalProject.jar the-gift-library.jar
+copy /target/FinalProject.jar /.
 
-ENTRYPOINT ["java", "-jar", "the-gift-library.jar"]
+
