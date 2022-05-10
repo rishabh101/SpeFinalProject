@@ -28,6 +28,8 @@ public class SubserviceServiceImpl implements SubserviceService {
 	
 	@Autowired
 	UserRepository userRepository;
+	@Autowired
+	SubserviceRepository subservicerep;
 	
 	@Override
 	public boolean addSubService(String category, String service, String subservice, int cost)
