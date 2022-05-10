@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
->>>>>>> Backend commit
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,7 +33,7 @@ public class UserController {
 	public boolean signUp(String fullname, String email, String address, String password ) {
 		return userService.signUp(fullname, email, address, password);
 
-	
+	}
 	@PostMapping("/signup")
 	public boolean signUp(@RequestBody Users user ) {
 		return userService.signUp(user.getFullname(), user.getEmail(), user.getAddress(), user.getPassword());
