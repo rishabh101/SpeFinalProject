@@ -1,10 +1,8 @@
-package com.example.urban.FinalProject.Services.impl;
+package com.example.urban.FinalProject.Services.impl
 
-<<<<<<< HEAD
-=======
 import java.util.List;
 
->>>>>>> Backend commit
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +15,7 @@ public class UserServiceImplementation implements UserService{
 
 	@Autowired
 	UserRepository userRepository;
-<<<<<<< HEAD
+
 	
 	public boolean signUp(String fullname, String email, String address, String password ) {
 		try {
@@ -36,7 +34,7 @@ public class UserServiceImplementation implements UserService{
 	}
 
 
-=======
+
 	@Override
 	public boolean signUp(String fullname, String email, String address, String password ) {
 		
@@ -84,6 +82,6 @@ public class UserServiceImplementation implements UserService{
 	}
 
      
->>>>>>> Backend commit
+
 
 }
