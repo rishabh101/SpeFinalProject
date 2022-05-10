@@ -35,18 +35,7 @@ public class UserServiceImplementation implements UserService{
 
 
 
-	@Override
-	public boolean signUp(String fullname, String email, String address, String password ) {
-		
-		Users user = new Users();
-		user.setFullname(fullname);
-		user.setEmail(email);
-		user.setAddress(address);
-		user.setPassword(password);
-		userRepository.save(user);	
-		return true;
 	
-	}
 	
 	@Override
 	public long login (String emailId,String password)
