@@ -1,4 +1,4 @@
-[docker]
+[ubuntu]
 172.16.133.115 ansible_user=rishabh
 host_key_checking=False
 
