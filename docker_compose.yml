@@ -1,44 +1,42 @@
-version: "2.4"
+version: '3.5'
 services:
+#   app:
+#     build: 
+#       context: .
+#     volumes:
+#       - .:/my-app
 
-  mysql:
-    image: mysql/mysql-server
-    container_name: mysql
-    networks:
-      - my-net
+frontend:
+    image: "rishabh123456/spe_react123"
+    ports:
+      - "3000:3000"
+    container_name: frontend_container1
+    command: npm start
+
+  backend:
+    image: "rishabh123456/spe_spring"
+    ports:
+      - "8000:8000"
+    container_name: backend_container_sql1
+    restart: on-failure
+    environment:
+      - MYSQL_HOST=mydb
+      - MYSQL_PORT=3306
+    depends_on:
+      - mydb
+
+  mydb:
+    image: "mysql:latest"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data4:"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe" --defaults-file="C:\ProgramData\MySQL\MySQL Server 8.0\my.ini" MySQL80
+    container_name: database_container
     environment:
       - MYSQL_ROOT_PASSWORD=rishabh123#
       - MYSQL_DATABASE=finalproject
-      - MYSQL_USER=root
-      
-    
+      - MYSQL_USER=prudhvi
+      - MYSQL_PASSWORD=password
 
-    ports:
-      - "3306:3306"
-
-  react:
-    image: rishabh123456/spe_react123
-    container_name: react
-    ports:
-      - "3000:3000"
-    networks:
-      - rishabh-net
-    depends_on:
-      - spring
-
-  spring:
-    image: rishabh123456/spe_spring
-    container_name: spring
-    ports:
-      - "8000:8000"
-    networks:
-      - rishabh-net"
-    depends_on:
-      mysql:
-        
-
-
-networks:
-  rishabh-net:
-
-
+volumes:
+  mysql-data4:
