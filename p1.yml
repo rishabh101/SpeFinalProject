@@ -6,6 +6,6 @@
   tasks:
     - name: copy docker file
       copy:
-        src: /workspace/FinalProject/back-end/docker-compose.yml
-        dest: ./
+        src: docker-compose.yml
+        dest: docker-compose.yml
     
