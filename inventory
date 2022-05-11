@@ -1,2 +1,2 @@
 [docker]
-172.18.0.1 ansible_user=rishabh
+172.17.0.1 ansible_user=rishabh
