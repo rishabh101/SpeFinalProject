@@ -1,15 +1,17 @@
 ---
-- name: Pull docker image of Calculator
-  hosts: all
-  tasks:
+- name: run containers
+  hosts: docker
+  become: true
 
-    - name: Start docker service
-      service:
-        name: docker
-        state: started
-        
-    - name: pull docker image
-      shell: docker pull rishabh123456/spe_react123
-      
-    - name: running container
-      shell: docker run -it -d rishabh123456/spe_spring
+  tasks:
+    - name: copy docker file
+      copy:
+        src: docker-compose.yml
+        dest: docker-compose.yml
+    - name: shell docker
+      shell:
+        cmd: docker-compose down
+    - name: dockercompose
+      docker_compose:
+        project_src: .
+        state: present
