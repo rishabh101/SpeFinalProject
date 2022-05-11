@@ -8,10 +8,4 @@
       copy:
         src: docker-compose.yml
         dest: docker-compose.yml
-    - name: shell docker
-      shell:
-        cmd: docker-compose down
-    - name: dockercompose
-      docker_compose:
-        project_src: .
-        state: present
+    
