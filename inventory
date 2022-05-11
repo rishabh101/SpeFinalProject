@@ -1,2 +1,2 @@
 
-localhost ansible_user=rishabh
+10.0.2.15 ansible_user=rishabh
