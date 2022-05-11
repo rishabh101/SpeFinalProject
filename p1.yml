@@ -6,6 +6,6 @@
   tasks:
     - name: copy docker file
       copy:
-        src: docker-compose.yml
+        src: docker_compose.yml
         dest: ./
     
