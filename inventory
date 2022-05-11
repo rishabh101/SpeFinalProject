@@ -1,4 +1,4 @@
 [defaults]
-10.0.2.15 ansible_user=rishabh
+localhost ansible_user=rishabh
 host_key_checking=False
 
