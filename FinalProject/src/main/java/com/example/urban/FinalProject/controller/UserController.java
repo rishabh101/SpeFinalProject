@@ -29,10 +29,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@PostMapping("/signup")
-	public boolean signUp(String fullname, String email, String address, String password ) {
-		return userService.signUp(fullname, email, address, password);
-
+	
 	}
 	@PostMapping("/signup")
 	public boolean signUp(@RequestBody Users user ) {
