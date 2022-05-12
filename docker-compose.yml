@@ -16,7 +16,7 @@ services:
   backend:
     image: "rishabh123456/spe_spring"
     ports:
-      - "8080:8000"
+      - "8000:8000"
     container_name: backend_container_sql1
     restart: on-failure
     environment:
