@@ -28,7 +28,7 @@ services:
   mydb:
     image: "mysql:latest"
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql-data4:/var/lib/sql
     container_name: database_container
