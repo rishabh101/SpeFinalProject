@@ -36,7 +36,7 @@ services:
       - MYSQL_ROOT_PASSWORD=rishabh123#
       - MYSQL_DATABASE=finalproject
       - MYSQL_USER=rishabh
-      - MYSQL_PASSWORD=password
+      - MYSQL_PASSWORD=rishabh
 
 volumes:
   mysql-data4:
