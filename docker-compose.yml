@@ -35,8 +35,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=rishabh123#
       - MYSQL_DATABASE=finalproject
-      - MYSQL_USER=rishabh
-      - MYSQL_PASSWORD=rishabh
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=rishabh123#
 
 volumes:
   mysql-data4:
