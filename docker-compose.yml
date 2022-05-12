@@ -30,7 +30,7 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - mysql-data4:/var/lib/sql
+      - mysql-data4:/var/lib/mysql
     container_name: database_container
     environment:
       - MYSQL_ROOT_PASSWORD=rishabh123#
