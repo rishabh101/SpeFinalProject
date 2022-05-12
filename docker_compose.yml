@@ -6,7 +6,7 @@ services:
 #     volumes:
 #       - .:/my-app
 
-frontend:
+  frontend:
     image: "rishabh123456/spe_react123"
     ports:
       - "3000:3000"
@@ -30,7 +30,7 @@ frontend:
     ports:
       - "3306:3306"
     volumes:
-      - mysql-data4:"C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe" --defaults-file="C:\ProgramData\MySQL\MySQL Server 8.0\my.ini" MySQL80
+      - mysql-data4:/var/lib/sql
     container_name: database_container
     environment:
       - MYSQL_ROOT_PASSWORD=rishabh123#
