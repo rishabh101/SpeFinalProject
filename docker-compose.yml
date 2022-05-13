@@ -20,7 +20,7 @@ services:
     container_name: backend_container_sql1
     restart: on-failure
     environment:
-       environment:
+       
       - DATABASE_URL=jdbc:mysql://mysqldb-container:3306/finalproject
     depends_on:
       - mydb
@@ -40,5 +40,4 @@ services:
       - MYSQL_USER=root
       - MYSQL_PASSWORD=rishabh123#
 
-volumes:
-  mysql-data4:
+
