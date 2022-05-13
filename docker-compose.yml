@@ -30,7 +30,9 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - mysql-data4:/var/lib/mysql
+      - volumes:
+         - /home/rishabh/mydb/mysql/data:/var/lib/mysql
+         - /home/rishabh/mydb/mysql/init:/docker-entrypoint-initdb.d/:ro
     container_name: mysqldb-container
     environment:
       - MYSQL_ROOT_PASSWORD=rishabh123#
